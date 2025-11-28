@@ -1,0 +1,79 @@
+<!-- Page 1 – Mission Signup (index.html)
+Content:
+Mission heading and description
+Name (text input, required)
+Email (email input, required)
+Desired role (select: Pilot, Engineer, Scientist, Medic, etc.)
+Destination (select: Mars, Moon, Space Station, Europa, Titan)
+Experience level (radio: Beginner/Intermediate/Veteran)
+Optional: Favorite space snack
+Optional: Mission motto (textarea)
+JavaScript Requirements:
+Validate required fields
+Validate email format
+Ensure role and destination selected
+Save astronaut data to localStorage
+Redirect to roster page -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INTERSPACE CORP. Mission Signup</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <script defer src="../js/validation.js"></script>
+</head>
+<body>
+    <header>
+        <h1>INTERSPACE CORP. MISSION 8</h1>
+        <p>Sign up to become an astronaut and study human life in space.</p>
+        <nav class="main-nav">
+            <a class="nav-link" href="index.html">Signup</a>
+            <a class="nav-link" href="roster.html">Roster</a>
+        </nav>
+    </header>
+    <main>
+        <form id="astronautForm">
+            <label for="name">Name (required):</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email (required):</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="role">Desired Role (required):</label>
+            <select id="role" name="role" required>
+                <option value="" disabled selected>Select your role</option>
+                <option value="Pilot">Pilot</option>
+                <option value="Engineer">Engineer</option>
+                <option value="Scientist">Scientist</option>
+                <option value="Medic">Medic</option>
+            </select>
+
+            <label for="destination">Destination (required):</label>
+            <select id="destination" name="destination" required>
+                <option value="" disabled selected>Select your destination</option>
+                <option value="Mars">Mars</option>
+                <option value="Moon">Moon</option>
+                <option value="Space Station">Space Station</option>
+                <option value="Europa">Europa</option>
+                <option value="Titan">Titan</option>
+            </select>
+
+            <fieldset>
+                <legend>Experience Level (required):</legend>
+                <label><input type="radio" name="experience" value="Beginner" required> Beginner</label>
+                <label><input type="radio" name="experience" value="Intermediate"> Intermediate</label>
+                <label><input type="radio" name="experience" value="Veteran"> Veteran</label>
+            </fieldset>
+
+            <label for="snack">Favorite Space Snack (optional):</label>
+            <input type="text" id="snack" name="snack">
+
+            <label for="motto">Mission Motto (optional):</label>
+            <textarea id="motto" name="motto"></textarea>
+
+            <button type="submit">Submit</button>
+            
+        </form>
+    
